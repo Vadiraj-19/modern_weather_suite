@@ -23,7 +23,118 @@
         Your browser does not support the video tag.
       </video>
       <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black flex justify-center" >
-        <div class="fixed bottom-0 "><a href=""><img src="https://w7.pngwing.com/pngs/646/324/png-transparent-github-computer-icons-github-logo-monochrome-head-thumbnail.png" width="30px" height="20px"></a></div>
+        <div class="fixed bottom-0 "><a href=""><img src="https://w7.pngwing.com/pngs/646/324/png-transparent-github-computer-icons-github-logo-monochrome-head-thumbnail.pngSince there is no selected code, I will provide a general improvement to the HTML structure and add some accessibility features. Here's the modified code:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./output.css" rel="stylesheet">
+    <title>Weather forecast</title>
+    <link rel="icon" href="./image/UWwWbq9mr5oQIiDcQLgGf-transformed.jpeg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body class="p-0 relative w-screen xs:overflow-x-hidden h-screen bg-custom-gradient-image bg-center bg-cover flex justify-center items-center z-0">
+    <!-- Background Layer -->
+    <!-- Input Field Styling -->
+    
+    <video autoplay loop muted preload="auto" playsinline class="absolute inset-0  w-full h-full object-cover">
+        <source src="../image/background.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+    </video>
+    <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black flex justify-center" aria-hidden="true">
+        <div class="fixed bottom-0 "><a href=""><img src="https://w7.pngwing.com/pngs/646/324/png-transparent-github-computer-icons-github-logo-monochrome-head-thumbnail.png" width="30px" height="20px" alt="GitHub logo"></a></div>
+    </div>
+    
+    <main class="search-input flex flex-row-reverse items-start bg-no-repeat bg-contain  bg-white bg-opacity-30 backdrop-blur-sm backdrop-brightness-110 rounded-3xl  shadow-md w-[95%] h-[95%] z-10" aria-label="Weather forecast">
+        <article class="search-input flex items-start max-xs:hidden  max-sm-md:hidden bg-[url('../image/w-Photoroom.png')] bg-no-repeat bg-cover backdrop-blur-none opacity-40  w-[30%] h-[50%] z-10" aria-hidden="true">
+        </article>
+        <article class="flex max-xs:flex-col  max-xs:overflow-y-auto max-xs:overflow-x-hidden w-full h-full">
+            <article class="w-[30%]  max-xs:w-full flex flex-col  items-center justify-center h-full border-2 border-gray-400 rounded-3xl p-4">
+                <article class="flex justify-center items-center  w-full h-full">
+                    <input type="text" placeholder="Add city name" id="inputCity" class="w-full p-2 bg-transparent outline-none border-b-2 border-white text-white placeholder-gray-300" aria-label="City name input">
+                    <button id="searchBtn" class="p-2  flex justify-center items-center bg-transparent hover:border-white border-2 border-transparent  hover:scale-110 rounded-full text-white" aria-label="Search button">
+                        <i class="fa-solid fa-magnifying-glass scale-110"></i>
+                    </button>
+                </article>
+                <article class="temp  justify-center items-center flex flex-col w-full h-full  text-white font-thin">
+                    <section class="text-2xl">Temperature:</section>
+                    <section id="tempretureValue" class="text-6xl">22&deg;c</section>
+                </article>
+
+                <article class="humidityPanel w-full h-full flex flex-col  justify-center items-center  text-white font-thin">
+                    <article class="hum-icon w-20 h-10 max-xs:flex max-xs:justify-center max-xs:items-end">
+                        <i class="fa-solid fa-water text-3xl"></i>
+                    </article>
+                    <article class="mt-2">
+                        <section id="percentagevalue" class="text-white text-6xl font-extralight"> 48%</section>
+                        <section> humidity</section>
+                    </article>
+                </article>
+                <article class="wind-speed w-full h-full flex flex-col justify-center items-center  ">
+                    <article class="wind-panel ">
+                        <section id="windicon" class="text-white w-20 "><img src="../image/spring.png" alt="Wind icon"></section>
+                    </article>
+                    <article class="w-full h-full flex flex-col justify-center items-center">
+                        <section id="windValue" class="windvalue text-4xl flex items-center justify-center w-full">10.29km/h</section>
+                        <section class="flex w-full max-xs:ml-40 ml-20">wind speed</section>
+                    </article>
+                </article>
+                <article class="weather-icon  flex justify-center items-center  mt-2">
+                    <img id="weatherIcon" src="../image/clear.png" alt="Weather icon">
+                </article>
+            </article>
+            <article class="h-full w-full  ml-20   max-xs:ml-0 sm:ml-5 flex flex-col justify-between items-center   text-white">
+                <article class="w-full flex max-xs:ml-2 flex-col items-start ">
+                    <section class="mt-32  max-xs:mt-5">Weather Forecast</section>
+                    <section id="weatherTitle" class="text-7xl max-xs:text-4xl">Storm<br>with Heavy Rain</section>
+                    <section id="curDay" class="text-md  mt-12">IN, Friday, 11:45pm</section>
+                </article>
+                <article class="w-full flex max-xs:ml-2 justify-start ">
+                    <section id="cityName" class="text-4xl w-full  mb-2 ">Belagavi</section>
+                </article>
+
+                <article class="flex flex-col w-full  ">
+                    <section class="text-xl w-full mb-2 max-xs:ml-2">5 day Forecast</section>
+                    <article class="h-36  flex  mb-5 border-2 rounded-2xl  w-full">
+                        <section class="border-r-2 w-full border-black flex flex-col items-center justify-center ">
+                            <section id="dateofday1">2.11.2003</section>
+                            <section class="flex " id="tempofday1"><section class="font-bold">temp:</section> 22&deg;c</section>
+                            <section class="flex " id="humofday1"><section class="font-bold">hum:</section> 20%</section>
+                            <section class="flex " id="windofday1"><section class="font-bold">wind:</section>200</section>
+                        </section>
+                        <section class="border-r-2  w-full border-black flex flex-col items-center justify-center">
+                            <section id="dateofday2">2.11.2003</section>
+                            <section class="flex " id="tempofday2"><section class="font-bold" >temp:</section>22&deg;c</section>
+                            <section class="flex " id="humofday2"><section class="font-bold">hum:</section>20%</section>
+                            <section class="flex " id="windofday2"><section class="font-bold">wind:</section>200</section>
+                        </section>
+                        <section class="border-r-2  w-full border-black flex flex-col items-center justify-center">
+                            <section id="dateofday3">2.11.2003</section>
+                            <section class="flex " id="tempofday3"><section class="font-bold">temp:</section>22&deg;c</section>
+                            <section class="flex " id="humofday3"><section class="font-bold">hum:</section>20%</section>
+                            <section class="flex " id="windofday3"><section class="font-bold">wind:</section>200</section>
+                        </section>
+                        <section class="border-r-2  w-full border-black flex flex-col items-center justify-center">
+                            <section id="dateofday4">2.11.2003</section>
+                            <section class="flex " id="tempofday4"><section class="font-bold">temp:</section>22&deg;c</section>
+                            <section class="flex " id="humofday4"><section class="font-bold">hum:</section>20%</section>
+                            <section class="flex " id="windofday4"><section class="font-bold">wind:</section>200</section>
+                        </section>
+                        <section class="w-full flex flex-col items-center justify-center">
+                            <section id="dateofday5">2.11.2003</section>
+                            <section class="flex " id="tempofday5"><section class="font-bold">temp:</section>22&deg;c</section>
+                            <section class="flex " id="humofday5"><section class="font-bold">hum:</section>20%</section>
+                            <section class="flex " id="windofday5"><section class="font-bold">wind:</section>200</section>
+                        </section>
+                    </article>
+                </article>
+           " width="30px" height="20px"></a></div>
       </div>
       
     <article
